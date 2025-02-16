@@ -12,7 +12,7 @@ Các bước thực hiện:
 - B3. Lấy trung bình kết quả từ k lần chạy. </br>
 
 Thuật toán chạy trên số lượng 1000 ảnh mỗi lớp (1600 ảnh để train, 400 ảnh để test). Kết quả sau 5 lần test cho trung bình ***accuracy = 0.91***
-![Warehouse Control Systems](/assets/knn.PNG) </br>
+![Automation production error](/assets/knn.PNG) </br>
 
 
 ***2. Support Vector Machines và phương pháp lựa chọn mô hình sử dụng chiến lược Holdout.***
@@ -22,11 +22,16 @@ Thuật toán chạy trên số lượng 1000 ảnh mỗi lớp (1600 ảnh đ�
 - B4. Chọn ra giá trị C tốt nhất tương ứng với Pc lớn nhất. <br>
 
 Thuật toán chạy trên số lượng 1000 ảnh mỗi lớp (20 ảnh để train, 1980 ảnh để test). Kết quả test với ***C = 1*** cho ***accuracy = 1***
-![Warehouse Control Systems](/assets/svm.PNG)</br>
+![Automation production error](/assets/svm.PNG)</br>
 Kết quả cho thấy thuật toán SVM hoạt động tốt hơn so với k-NN.
 
 ### CÁC CÔNG NGHỆ SỬ DỤNG
 - OpenCV
 - Ngôn ngữ: C++
 ### HƯỚNG DẪN
-
+Để chạy thuật toán, cần liên kết tới thư viện OpenCV trong dự án. Trong Dataset chỉ có 20 ảnh để giảm dung lượng lưu trữ trên github.
+Các bước thực hiện trong Visual Studio.
+-B1: Click chuột phải vào dự án -> Properties -> VC++ Directories -> thêm 2 đường dẫn tới thư viện opencv vào Include Directories và Library Directories.
+![Automation production error](/assets/add_opencv_lib.PNG)
+-B2: Linker -> Input -> Additional Dependencies.
+![Automation production error](/assets/linker_input_tutorial.PNG)
