@@ -12,7 +12,7 @@ Các bước thực hiện:
 - B3. Lấy trung bình kết quả từ k lần chạy.
 - Thuật toán chạy trên số lượng 1000 ảnh/lớp. Kết quả sau 5 lần test cho trung bình accuracy = 0.91
   ![Warehouse Control Systems](/assets/knn.PNG) </br>
-***2. Support Vector Machines và phương pháp lựa chọn mô hình sử dụng chiến lược Holdout.***
+  </br>***2. Support Vector Machines và phương pháp lựa chọn mô hình sử dụng chiến lược Holdout.***
 - 1
 - 2
 - 3
