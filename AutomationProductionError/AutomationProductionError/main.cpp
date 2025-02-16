@@ -16,7 +16,7 @@ vector<Mat> flawlessImg_Full, pressedImg_Full, flawlessImg_32, pressedImg_32;
 
 
 /// <summary>
-/// 
+/// Đọc ảnh với kích thước đầy đủ và với kích thước 32x32.
 /// </summary>
 /// <param name="flawlessImgs"></param>
 /// <param name="pressedImgs"></param>
@@ -140,8 +140,6 @@ void crossValidationCombineStratifiedSampling(KNN& knn, const vector<Mat>& class
 			}
 		}
 
-		//Khởi tạo mô hình với 3 láng giềng gần nhất
-
 		//Huấn luyện mô hình
 		knn.train(D_train, Lb_train);
 		//Dùng độ đo accuracy để đánh giá mô hình
@@ -167,7 +165,7 @@ void crossValidationCombineStratifiedSampling(KNN& knn, const vector<Mat>& class
 
 
 void modelSelectionUsingHoldout(Svm& svm, const vector<Mat>& class1, const vector<Mat>& class2, int k = 2) {
-	//1. Chia tập tập D thành k phần không giao nhau.
+	//1. Chia tập tập D thành 2 phần D_train, T_valid
 	vector<vector<Mat>> D_class1 = splitData(class1, k, 0.1 /*lấy ra 1/10 ảnh để train*/);
 	vector<vector<Mat>> D_class2 = splitData(class2, k, 0.1);
 
@@ -193,6 +191,7 @@ void modelSelectionUsingHoldout(Svm& svm, const vector<Mat>& class1, const vecto
 	vector<Mat> D_train, T_valid;
 	vector<int> Lb_train, Lb_valid;
 	double C_optimal = 0, Pc = 0;
+	//Với mỗi C thuộc S, train với D_train, đo hiệu quả với T_valid và lấy kết quả Pc.
 	for (int i = 0; i < S.size(); i++) {
 		D_train = D[0]; T_valid = D[1];
 		Lb_train = Lb[0]; Lb_valid = Lb[1];
@@ -213,13 +212,13 @@ void modelSelectionUsingHoldout(Svm& svm, const vector<Mat>& class1, const vecto
 				numberOfCorrectPredictions++;
 		}
 		double accuracy = (double)numberOfCorrectPredictions / (double)TotalNumberOfPredictions;
-		if (accuracy > Pc) {
+		if (accuracy > Pc) { //Chọn ra C tốt nhất tương ứng với Pc lớn nhất
 			Pc = accuracy;
 			C_optimal = S[i];
 		}
 		cout << "C = " << S[i] << ", Number of correct predictions: " << numberOfCorrectPredictions << ", Accuracy: " << accuracy << endl;
 	}
-	cout << "The optimal C value is " << C_optimal << endl;
+	cout << "The best C value is " << C_optimal << endl;
 }
 
 
