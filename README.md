@@ -5,13 +5,13 @@ Mã nguồn trên là demo cho bài toán phân lớp dựa vào hình ảnh, s�
 ### CÁC PHƯƠNG PHÁP SỬ DỤNG
 ***1. Thuật toán k-Nearest Neighbors và phương pháp xác thực chéo kết hợp lấy mẫu phân tầng.*** </br>
 Các bước thực hiện:
-- B1. Chia tập D mỗi lớp thành k phần bằng nhau và không giao nhau.
+- B1. Chia tập D mỗi lớp thành k phần bằng nhau và không giao nhau. (chọn k = 5)
 - B2. Thực hiện k lần chạy, mỗi lần chạy lấy 1 phần của tập D để test, còn lại dùng để train.
     + Huấn luyện trên tập D train với 3 láng giềng gần nhât.
     + Đánh giá hiệu quả trên tập D test với độ đo accuracy.
 - B3. Lấy trung bình kết quả từ k lần chạy.
-
-  ![Warehouse Control Systems](/assets/knn.PNG)
+- Thuật toán chạy trên số lượng 1000 ảnh/lớp. Kết quả sau 5 lần test cho trung bình accuracy = 0.91
+  ![Warehouse Control Systems](/assets/knn.PNG) </br>
 ***2. Support Vector Machines và phương pháp lựa chọn mô hình sử dụng chiến lược Holdout.***
 - 1
 - 2
