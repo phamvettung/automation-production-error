@@ -7,7 +7,7 @@ Mã nguồn trên là demo cho bài toán phân lớp dựa vào hình ảnh, s�
 Các bước thực hiện:
 - B1. Chia tập D mỗi lớp thành k phần bằng nhau và không giao nhau. (chọn k = 5)
 - B2. Thực hiện k lần chạy, mỗi lần chạy lấy 1 phần của tập D để test, còn lại dùng để train.
-    + Huấn luyện trên tập D train với 3 láng giềng gần nhât.
+    + Huấn luyện trên tập D train với 3 láng giềng gần nhấtt.
     + Đánh giá hiệu quả trên tập D test với độ đo accuracy.
 - B3. Lấy trung bình kết quả từ k lần chạy.
 Thuật toán chạy trên số lượng 1000 ảnh mỗi lớp (1600 ảnh để train, 400 ảnh để test). Kết quả sau 5 lần test cho trung bình ***accuracy = 0.91***
