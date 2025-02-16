@@ -29,13 +29,12 @@ Kết quả cho thấy thuật toán SVM hoạt động tốt hơn so với k-NN
 - OpenCV
 - Ngôn ngữ: C++
 ### HƯỚNG DẪN
-Để chạy thuật toán, cần liên kết tới thư viện OpenCV trong dự án. Trong Dataset chỉ có 20 ảnh để giảm dung lượng lưu trữ trên github.
+Để chạy thuật toán, cần liên kết tới thư viện OpenCV trong dự án.
 
 Các bước thực hiện trong Visual Studio.
 
-
--B1: Click chuột phải vào dự án -> Properties -> VC++ Directories -> thêm 2 đường dẫn tới thư viện opencv vào Include Directories và Library Directories.
+-B1: Click chuột phải vào dự án -> Properties -> VC++ Directories -> thêm 2 đường dẫn tới thư viện opencv vào Include Directories và Library Directories. </br>
 ![Automation production error](/assets/add_opencv_lib.PNG)
 
--B2: Linker -> Input -> Additional Dependencies.
+-B2: Linker -> Input -> Additional Dependencies. </br>
 ![Automation production error](/assets/linker_input_tutorial.PNG)
