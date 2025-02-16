@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\IT\\Project repositories\\automation-production-error\\AutomationProductionError\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AFE5367D-62F0-45C2-A10C-D6A00DC3A254}|AutomationProductionError\\AutomationProductionError.vcxproj|D:\\IT\\Project repositories\\automation-production-error\\AutomationProductionError\\AutomationProductionError\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AFE5367D-62F0-45C2-A10C-D6A00DC3A254}|AutomationProductionError\\AutomationProductionError.vcxproj|solutionrelative:AutomationProductionError\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -9,11 +14,24 @@
       "DocumentGroups": [
         {
           "DockedHeight": 20,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\IT\\Project repositories\\automation-production-error\\AutomationProductionError\\AutomationProductionError\\main.cpp",
+              "RelativeDocumentMoniker": "AutomationProductionError\\main.cpp",
+              "ToolTip": "D:\\IT\\Project repositories\\automation-production-error\\AutomationProductionError\\AutomationProductionError\\main.cpp",
+              "RelativeToolTip": "AutomationProductionError\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-16T01:54:44.148Z",
+              "EditorCaption": ""
             }
           ]
         }
