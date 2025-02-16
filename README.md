@@ -22,7 +22,7 @@ Thuật toán chạy trên số lượng 1000 ảnh mỗi lớp (1600 ảnh đ�
 - B4. Chọn ra giá trị C tốt nhất tương ứng với Pc lớn nhất. <br>
 
 Thuật toán chạy trên số lượng 1000 ảnh mỗi lớp (20 ảnh để train, 1980 ảnh để test). Kết quả test với ***C = 1*** cho ***accuracy = 1***
-![Warehouse Control Systems](/assets/svm.PNG)
+![Warehouse Control Systems](/assets/svm.PNG)</br>
 Kết quả cho thấy thuật toán SVM hoạt động tốt hơn so với k-NN.
 
 ### CÁC CÔNG NGHỆ SỬ DỤNG
