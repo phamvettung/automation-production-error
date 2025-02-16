@@ -9,7 +9,7 @@ Các bước thực hiện:
 - B2. Thực hiện k lần chạy, mỗi lần chạy lấy 1 phần của tập D để test, còn lại dùng để train.
     + Huấn luyện trên tập D train với 3 láng giềng gần nhấtt.
     + Đánh giá hiệu quả trên tập D test với độ đo accuracy.
-- B3. Lấy trung bình kết quả từ k lần chạy.
+- B3. Lấy trung bình kết quả từ k lần chạy.//
 Thuật toán chạy trên số lượng 1000 ảnh mỗi lớp (1600 ảnh để train, 400 ảnh để test). Kết quả sau 5 lần test cho trung bình ***accuracy = 0.91***
 ![Warehouse Control Systems](/assets/knn.PNG)
 ***2. Support Vector Machines và phương pháp lựa chọn mô hình sử dụng chiến lược Holdout.***
