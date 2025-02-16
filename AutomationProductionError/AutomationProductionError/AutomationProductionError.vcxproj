@@ -129,10 +129,12 @@
   <ItemGroup>
     <ClCompile Include="KNN.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="OtsuThresholding.cpp" />
     <ClCompile Include="Svm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="KNN.h" />
+    <ClInclude Include="OtsuThresholding.h" />
     <ClInclude Include="Svm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
