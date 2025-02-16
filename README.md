@@ -6,8 +6,7 @@ Mã nguồn trên là demo cho bài toán phân lớp dựa vào hình ảnh, s�
 ***1. Thuật toán k-Nearest Neighbors và phương pháp xác thực chéo kết hợp lấy mẫu phân tầng.*** </br>
 - 1
 - 2
-- 3
-</br>
+- 3 </br>
 ***2. Support Vector Machines và phương pháp lựa chọn mô hình sử dụng chiến lược Holdout.***
 - 1
 - 2
