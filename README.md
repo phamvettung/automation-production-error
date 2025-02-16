@@ -17,7 +17,7 @@ Các bước thực hiện:
 - B2. Chọn ra tập S chứa các giá trị C tiềm năng
 - B3. Với mỗi giá trị C thuộc tập S, huấn luyện mô hình cho tập D_train. Đo hiệu quả trên tập T_valid để lấy kết quả Pc
 - B4. Chọn ra giá trị C tốt nhất tương ứng với Pc lớn nhất.
-- Thuật toán chạy trên số lượng 1000 ảnh mỗi lớp (20 ảnh để train, 1980 ảnh để test). Kết quả test với C = 1 và accuracy = 1
+- Thuật toán chạy trên số lượng 1000 ảnh mỗi lớp (20 ảnh để train, 1980 ảnh để test). Kết quả test với C = 1 cho Accuracy = 1
   ![Warehouse Control Systems](/assets/svm.PNG) </br>
 ### CÁC CÔNG NGHỆ SỬ DỤNG
 
