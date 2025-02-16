@@ -168,8 +168,8 @@ void crossValidationCombineStratifiedSampling(KNN& knn, const vector<Mat>& class
 
 void modelSelectionUsingHoldout(Svm& svm, const vector<Mat>& class1, const vector<Mat>& class2, int k = 2) {
 	//1. Chia tập tập D thành k phần không giao nhau.
-	vector<vector<Mat>> D_class1 = splitData(class1, k, 0.01);
-	vector<vector<Mat>> D_class2 = splitData(class2, k, 0.01);
+	vector<vector<Mat>> D_class1 = splitData(class1, k, 0.1 /*lấy ra 1/10 ảnh để train*/);
+	vector<vector<Mat>> D_class2 = splitData(class2, k, 0.1);
 
 	//Tập các quan sát và nhãn của 2 class.
 	vector<vector<Mat>> D; //[0] = D train, [1] = T valid
@@ -309,7 +309,7 @@ void testModel(KNN& knn, Svm& svm, vector<Mat> flawlessImg, vector<Mat> pressedI
 	int predictLabel;
 	Mat resizedImage, outputImage, queryImage;
 
-	for (int i = 20; i < 100; ++i) {
+	for (int i = 0; i < 5; ++i) { //test 5 ảnh đầu tiên
 		if (models == 1) {
 			resize(flawlessImg[i], resizedImage, Size(32, 32));
 			predictLabel = knn.predict(resizedImage);
