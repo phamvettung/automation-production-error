@@ -11,7 +11,7 @@ Các bước thực hiện:
     + Đánh giá hiệu quả trên tập D test với độ đo accuracy.
 - B3. Lấy trung bình kết quả từ k lần chạy. </br>
 
-Thuật toán chạy trên số lượng 1000 ảnh mỗi lớp (1600 ảnh để train, 400 ảnh để test). Kết quả sau 5 lần test cho trung bình ***accuracy = 0.91***
+Thuật toán chạy trên số lượng 1000 ảnh mỗi lớp (1600 ảnh để train, 400 ảnh để test). Kết quả sau 5 lần test cho trung bình ***accuracy = 0.91***</br>
 ![Automation production error](/assets/knn.PNG) </br>
 
 
@@ -21,7 +21,7 @@ Thuật toán chạy trên số lượng 1000 ảnh mỗi lớp (1600 ảnh đ�
 - B3. Với mỗi giá trị C thuộc tập S, huấn luyện hệ thống cho tập D_train. Đo hiệu quả trên tập T_valid để lấy kết quả Pc
 - B4. Chọn ra giá trị C tốt nhất tương ứng với Pc lớn nhất. <br>
 
-Thuật toán chạy trên số lượng 1000 ảnh mỗi lớp (20 ảnh để train, 1980 ảnh để test). Kết quả test với ***C = 1*** cho ***accuracy = 1***
+Thuật toán chạy trên số lượng 1000 ảnh mỗi lớp (20 ảnh để train, 1980 ảnh để test). Kết quả test với ***C = 1*** cho ***accuracy = 1***</br>
 ![Automation production error](/assets/svm.PNG)</br>
 Kết quả cho thấy thuật toán SVM hoạt động tốt hơn so với k-NN.
 
