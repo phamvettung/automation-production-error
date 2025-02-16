@@ -129,9 +129,11 @@
   <ItemGroup>
     <ClCompile Include="KNN.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Svm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="KNN.h" />
+    <ClInclude Include="Svm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
