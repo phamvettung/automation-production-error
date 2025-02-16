@@ -7,9 +7,11 @@ Mã nguồn trên là demo cho bài toán phân lớp dựa vào hình ảnh, s�
 Các bước thực hiện:
 - B1. Chia tập D mỗi lớp thành k phần bằng nhau và không giao nhau.
 - B2. Thực hiện k lần chạy, mỗi lần chạy lấy 1 phần của tập D để test, còn lại dùng để train.
-    + Huấn luyện mô hình sử dụng D train với 3 láng giềng gần nhât.
-    + Đánh giá hiệu quả mô hình sử dụng D test với độ đo accuracy.
+    + Huấn luyện trên tập D train với 3 láng giềng gần nhât.
+    + Đánh giá hiệu quả trên tập D test với độ đo accuracy.
 - B3. Lấy trung bình kết quả từ k lần chạy.
+
+  ![Warehouse Control Systems](/assets/knn.PNG)
 ***2. Support Vector Machines và phương pháp lựa chọn mô hình sử dụng chiến lược Holdout.***
 - 1
 - 2
