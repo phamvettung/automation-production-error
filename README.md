@@ -11,7 +11,7 @@ Các bước thực hiện:
     + Đánh giá hiệu quả trên tập D test với độ đo accuracy.
 - B3. Lấy trung bình kết quả từ k lần chạy. </br>
 Thuật toán chạy trên số lượng 1000 ảnh mỗi lớp (1600 ảnh để train, 400 ảnh để test). Kết quả sau 5 lần test cho trung bình ***accuracy = 0.91***
-![Warehouse Control Systems](/assets/knn.PNG)
+![Warehouse Control Systems](/assets/knn.PNG) </br>
 ***2. Support Vector Machines và phương pháp lựa chọn mô hình sử dụng chiến lược Holdout.***
 - B1. Chia tập D thành 2 phần: D_train và T_valid
 - B2. Chọn ra tập S chứa các giá trị C tiềm năng
