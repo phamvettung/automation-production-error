@@ -248,12 +248,13 @@ Mat getContours(Mat imgOriginal, Mat img, string labels) {
 	vector<Rect> boundRect(contours.size());
 
 	//Chuyển ảnh mức xám sang ảnh grb
-	Mat grbImage;
-	cvtColor(imgOriginal, grbImage, COLOR_GRAY2RGB);
+	Mat grbImage, grayImage;
+	cvtColor(imgOriginal, grayImage, COLOR_RGB2GRAY);
+	cvtColor(grayImage, grbImage, COLOR_GRAY2RGB);
 
 	for (int i = 0; i < contours.size(); i++) {
 		int area = contourArea(contours[i]);
-		//cout << "area: " << area << endl;
+		cout << "area: " << area << endl;
 
 		if (area > 1000) {
 			float peri = arcLength(contours[i], true);
@@ -270,7 +271,6 @@ Mat getContours(Mat imgOriginal, Mat img, string labels) {
 				rectangle(grbImage, boundRect[i].tl()/*top left*/, boundRect[i].br()/*bottom right*/, Scalar(0, 0, 255), 3);
 				putText(grbImage, labels, { boundRect[i].x + 20, boundRect[i].y + 20 }, FONT_HERSHEY_COMPLEX_SMALL, 0.95, Scalar(0, 0, 255));
 			}
-
 		}
 	}
 	return grbImage;
@@ -279,25 +279,37 @@ Mat getContours(Mat imgOriginal, Mat img, string labels) {
 
 Mat detectProduct(Mat inputImg, int label) {
 
-	Mat grayImage;
-	cvtColor(inputImg, grayImage, cv::COLOR_BGR2GRAY);
+	Mat hsvImage, mask;
+	int hmin = 10, smin = 0, vmin = 0;
+	int hmax = 43, smax = 255, vmax = 255;
 
-	Mat blurredImage;
-	GaussianBlur(grayImage, blurredImage, cv::Size(5, 5), 1.5);
+	cvtColor(inputImg, hsvImage, cv::COLOR_BGR2HSV);
 
-	Mat gradientImage = gradient(blurredImage);
+	Scalar lower(hmin, smin, vmin);
+	Scalar upper(hmax, smax, vmax);
 
-	Mat kernel = getStructuringElement(MORPH_RECT, Size(11, 11));
+	inRange(hsvImage, lower, upper, mask);
+
+	Mat imageNegative = 255 - mask;
+
+	Mat gradientImage = gradient(mask);
+	Mat kernel = getStructuringElement(MORPH_RECT, Size(5, 5));
 	Mat dilatedImage, erodedImage;
 	dilate(gradientImage, dilatedImage, kernel);
 	erode(dilatedImage, erodedImage, kernel);
 
+	/*imshow("mask", mask);
+	imshow("img negative", imageNegative);
+	imshow("gradient", gradientImage);
+	imshow("dilate img", dilatedImage);
+	imshow("erode", erodedImage);*/
+
 	Mat contours;
 	if (label == 0) {
-		contours = getContours(grayImage, erodedImage, "OK");
+		contours = getContours(inputImg, imageNegative, "OK");
 	}
 	else {
-		contours = getContours(grayImage, erodedImage, "NG");
+		contours = getContours(inputImg, imageNegative, "NG");
 	}
 
 	return contours;
