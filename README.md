@@ -12,7 +12,7 @@ Các bước thực hiện:
 - B3. Lấy trung bình kết quả từ k lần chạy. </br>
 
 Thuật toán chạy trên số lượng 1000 ảnh mỗi lớp (1600 ảnh để train, 400 ảnh để test). Kết quả sau 5 lần test cho trung bình ***accuracy = 0.91***</br>
-![Automation production error](/assets/knn.PNG) </br>
+![Automation production error](/assets/k-NN.PNG) </br>
 
 
 ***2. Support Vector Machines với đặc trưng HOG và phương pháp lựa chọn mô hình sử dụng chiến lược Holdout.***
