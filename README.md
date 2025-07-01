@@ -27,13 +27,3 @@ Kết quả cho thấy SVM hoạt động tốt hơn so với k-NN.
 
 ### CÁC CÔNG NGHỆ SỬ DỤNG
 - OpenCV
-- Ngôn ngữ: C++
-### HƯỚNG DẪN
-Mở chương trình với Microsoft Visual Studio, tải thư viện opencv và liên kết tới OpenCV trong dự án.
-Các bước thực hiện:
-
--B1: Click chuột phải vào dự án -> ***Properties*** -> ***VC++ Directories*** -> thêm 2 đường dẫn tới thư viện opencv vào ***Include Directories*** và ***Library Directories***. </br>
-![Automation production error](/assets/add_opencv_lib.PNG)
-
--B2: ***Linker*** -> ***Input*** -> ***Additional Dependencies***. </br>
-![Automation production error](/assets/linker_input_tutorial.PNG)
