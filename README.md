@@ -15,7 +15,7 @@ Thuật toán chạy trên số lượng 1000 ảnh mỗi lớp (1600 ảnh đ�
 ![Automation production error](/assets/k-NN.PNG) </br>
 
 
-***2. Support Vector Machines với đặc trưng HOG và phương pháp lựa chọn mô hình sử dụng chiến lược Holdout.***
+***2. Support Vector Machines với đặc trưng HOG (Histogram of Oriented Gradients) và Phương pháp lựa chọn mô hình sử dụng chiến lược Holdout.***
 - B1. Chia tập D thành 2 phần: D_train và T_valid
 - B2. Chọn ra tập S chứa các giá trị C tiềm năng
 - B3. Với mỗi giá trị C thuộc tập S, huấn luyện hệ thống cho tập D_train. Đo hiệu quả trên tập T_valid để lấy kết quả Pc
@@ -26,4 +26,4 @@ Thuật toán chạy trên số lượng 1000 ảnh mỗi lớp (20 ảnh để 
 Kết quả cho thấy SVM hoạt động tốt hơn so với k-NN.
 
 ### CÁC CÔNG NGHỆ SỬ DỤNG
-- OpenCV
+- OpenCV C++
